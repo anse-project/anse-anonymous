@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Model Already Knows the Best Noise</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
   <style>
     /* Global styles for high readability and a clean look */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Google Sans', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
@@ -256,6 +258,8 @@
 
       <div class="section-title">Overview of our BANSA-based noise selection process.</div>
       <p style="width: 71%; text-align: left; font-size: 18px; margin: 0 auto;">
+        Inspired by <u>Active Learning</u>, which selects the most informative samples during training, we introduce Active Noise Selection to identify <b>  <u>the most informative initial noise seeds representing lower uncertainty (our proposed BANASA).</u> </b>
+        BANASA builds upon Bayesian Active Learning by Disagreement (BALD), but we design this attention space specifically for generation tasks. 
         Given a text prompt c, <b>  <u> we compute BANSA scores for multiple noise seeds using Bernoulli-masked attention maps from selected layers at an early diffusion step </u> </b>.
         The seed with the lowest score, indicating confident and consistent attention, is selected for generation.
       </p>
